@@ -22,6 +22,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="edu.wm.step1.Index"
+            android:label="@string/title_activity_index" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.NewPost"
+            android:label="@string/title_activity_new_post" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.Browse"
+            android:label="@string/title_activity_browse" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.ViewPost"
+            android:label="@string/title_activity_view_post" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.ViewStep"
+            android:label="@string/title_activity_view_step" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.CreateStep"
+            android:label="@string/title_activity_create_step" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.MyPosts"
+            android:label="@string/title_activity_my_posts" >
+        </activity>
     </application>
 
 </manifest>
