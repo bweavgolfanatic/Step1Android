@@ -17,7 +17,7 @@
     <string name="rating">Rating</string>
     <string name="posts">Posts:</string>
     <string name="newPost">New Post</string>
-    <string name="public">Public</string>
+    <string name="publicPost">Public</string>
     <string name="browse">Browse</string>
     <string name="users">User</string>
     <string name="myPosts">My Posts</string>
@@ -30,13 +30,14 @@
     <string name="comment">Comment</string>
     <string name="hard">Hard</string>
     <string name="postName">Post Name:</string>
-    <string name="private">Private</string>
+    <string name="privatePost">Private</string>
     <string name="difficulty">Difficulty:</string>
     <string name="title_activity_browse">Browse</string>
     <string name="zero">0</string>
     <string name="step">Step</string>
     <string name="comments">Comments:</string>
     <string name="picture">Take Picture</string>
+    <string name="toolbox">Step1</string>
 
     <string-array name="Sorting">
         <item>Popular</item>
@@ -50,5 +51,6 @@
     <string name="title_activity_view_step">ViewStep</string>
     <string name="title_activity_create_step">CreateStep</string>
     <string name="title_activity_my_posts">MyPosts</string>
+    <string name="title_activity_spash_screen">SpashScreen</string>
 
 </resources>

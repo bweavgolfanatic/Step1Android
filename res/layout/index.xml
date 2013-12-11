@@ -55,15 +55,6 @@
         android:text="@string/posts"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
-    <TextView
-        android:id="@+id/numPosts"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/numPostsTitle"
-        android:layout_alignBottom="@+id/numPostsTitle"
-        android:layout_toRightOf="@+id/quickContactBadge1"
-        android:text="@string/zero" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -90,5 +81,13 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/view1"
         android:text="@string/myPosts" />
+
+    <TextView
+        android:id="@+id/numPosts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/numPostsTitle"
+        android:layout_alignRight="@+id/username"
+        android:text="@string/zero" />
 
 </RelativeLayout>

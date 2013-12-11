@@ -15,28 +15,20 @@
             android:layout_height="wrap_content"
             android:text="@string/log_in"
             android:textAppearance="?android:attr/textAppearanceLarge" />
-
     </TableRow>
-    
 
     <TableRow
         android:id="@+id/tableRow2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/username"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <EditText
-            android:id="@+id/username1"
+            android:id="@+id/usernameField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10" >
+            android:ems="10"
+            android:hint="@string/username"
+            android:inputType="textNoSuggestions" >
 
             <requestFocus />
         </EditText>
@@ -48,139 +40,107 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
 
-        <TextView
-            android:id="@+id/numPostsTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/password"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
-
         <EditText
-            android:id="@+id/password1"
+            android:id="@+id/passwordField"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
     </TableRow>
 
-	<TableRow android:id="@+id/tableRow4"
-	     android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" > 
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-		<Button
-		    android:id="@+id/Button01"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/sign_in" />
+        <Button
+            android:id="@+id/logInButton"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/log_in" />
 
-		
-	   
+    </TableRow>
 
-	     
-	</TableRow>
-	
-	<View
-        android:layout_width="fill_parent"
-        android:layout_height="60dp">
-    	</View>
-	
+    <TableRow
+        android:id="@+id/tableRow6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-	<TableRow
-	    android:id="@+id/tableRow5"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" >
-	    
-	    
-	   
-		
-		<TextView
-	    android:id="@+id/username"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/register"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
-
-		
-
-		
-
-	</TableRow>
-
-	<TableRow
-	    android:id="@+id/tableRow6"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" >
-		
-		<TextView
-	    android:id="@+id/postsTitle"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/username"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
-	    
-	    <EditText
-            android:id="@+id/username2"
+        <TextView
+            android:id="@+id/register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
-            android:ems="10" >
+            android:layout_weight="1"
+            android:text="@string/register"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <requestFocus />
-        </EditText> 
-	</TableRow>
+    </TableRow>
 
-	<TableRow
-	    android:id="@+id/tableRow7"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" >
-	    
-	    <TextView
-	    android:id="@+id/password2"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/password"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
-	    
-	    <EditText
-            android:id="@+id/passwordfield2"
+    <TableRow
+        android:id="@+id/tableRow7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/usernameField2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
-	</TableRow>
+            android:hint="@string/username"
+            android:inputType="textNoSuggestions" />
 
-	<TableRow
-	    android:id="@+id/tableRow8"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" >
-	    <TextView
-	    android:id="@+id/verifyPassword"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text="@string/verify_password"
-	    android:textAppearance="?android:attr/textAppearanceLarge" />
-	    
-	    <EditText
-            android:id="@+id/verifypasswordfield"
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/passwordField2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/password"
             android:inputType="textPassword" />
 
-		</TableRow>
+    </TableRow>
 
-	<TableRow
-	    android:id="@+id/tableRow9"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content" >
+    <TableRow
+        android:id="@+id/tableRow9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
 
-		<Button
-		    android:id="@+id/registerButton"
-		    android:layout_width="wrap_content"
-		    android:layout_height="wrap_content"
-		    android:text="@string/register" />
+        <EditText
+            android:id="@+id/verifyPasswordField"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="@string/verify_password"
+            android:inputType="textPassword" />
 
-	</TableRow>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/registerButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register" />
+
+    </TableRow>
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/toolbox"
+        android:contentDescription="@string/toolbox" />
 
 </TableLayout>

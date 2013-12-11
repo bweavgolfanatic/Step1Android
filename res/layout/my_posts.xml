@@ -83,4 +83,25 @@
         android:layout_alignParentRight="true"
         android:text="@string/next" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_alignTop="@+id/quickContactBadge1"
+        android:layout_marginTop="18dp"
+        android:orientation="vertical" >
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/listView1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/numPosts"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignTop="@+id/view1" >
+
+    </ListView>
+
 </RelativeLayout>
