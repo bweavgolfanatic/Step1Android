@@ -10,6 +10,7 @@ public class Step1RestClient {
 
 	  private static AsyncHttpClient client = new AsyncHttpClient();
 	  
+	  
 	  public static void setBasicAuth(String user, String pass){
 	        AuthScope scope = AuthScope.ANY;
 	        client.setBasicAuth(user, pass, scope);
@@ -26,4 +27,9 @@ public class Step1RestClient {
 	  private static String getAbsoluteUrl(String relativeUrl) {
 	      return BASE_URL + relativeUrl;
 	  }
+	  
+	  public static void setCookieStore(PersistentCookieStore cookieStore) {
+		  
+		    client.setCookieStore(cookieStore);
+		}
 	}

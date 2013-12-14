@@ -62,7 +62,7 @@
         android:layout_alignBaseline="@+id/numPostsTitle"
         android:layout_alignBottom="@+id/numPostsTitle"
         android:layout_toRightOf="@+id/quickContactBadge1"
-        android:text="@string/zero" />
+        android:text="@string/blank" />
 
     <Button
         android:id="@+id/button1"

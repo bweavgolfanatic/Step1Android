@@ -11,61 +11,81 @@
     <RadioGroup
         android:id="@+id/radioGroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/newPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/newPost"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <RadioButton
+            android:id="@+id/privateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="55dp"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/privatePost" />
+
+        <RadioButton
+            android:id="@+id/publicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onRadioButtonClicked"
+            android:text="@string/publicPost" />
     </RadioGroup>
 
-    <RadioButton
-        android:id="@+id/radioButton2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="55dp"
-        android:text="@string/privatePost" />
-
-    <RadioButton
-        android:id="@+id/radioButton1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/radioButton2"
-        android:text="@string/publicPost" />
-
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/radioButton1"
-        android:layout_marginTop="19dp"
-        android:layout_toRightOf="@+id/radioGroup"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignRight="@+id/difficulty"
         android:text="@string/start" />
 
-    <TextView
-        android:id="@+id/textView1"
+    <EditText
+        android:id="@+id/difficulty"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/radioGroup"
-        android:layout_marginTop="62dp"
-        android:text="@string/postName"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_above="@+id/startButton"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:text="@string/difficulty"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="40dp"
+        android:ems="10"
+        android:hint="@string/difficulty" />
 
-    <TextView
-        android:id="@+id/textView3"
+    <EditText
+        android:id="@+id/postName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/radioGroup"
-        android:layout_alignTop="@+id/radioGroup"
-        android:text="@string/newPost"
+        android:layout_above="@+id/difficulty"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:ems="10"
+        android:hint="@string/postName" >
+
+        <requestFocus />
+    </EditText>
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/postName"
+        android:layout_alignLeft="@+id/postName"
+        android:entries="@array/category_arrays"
+        android:prompt="@string/category_prompt" />
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/category"
+        android:layout_alignParentLeft="true"
+        android:text="@string/category"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>

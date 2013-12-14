@@ -111,9 +111,12 @@ public class MainActivity extends Activity {
 					@Override
 					public void onSuccess(JSONObject response) {
 						try {
+							Step1RestClient.setCookieStore(new PersistentCookieStore(getApplicationContext()));
+							
 							String message = response.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("login successful")){				//whatever ben does for JSON
+								Log.v(LOG_TAG, "logging in");
 								Intent i = new Intent(MainActivity.this, Index.class);     
 								startActivity(i);
 								//finish();
@@ -179,6 +182,7 @@ public class MainActivity extends Activity {
 							String message = response.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("user created successfully")){
+								Step1RestClient.setCookieStore(new PersistentCookieStore(getApplicationContext()));
 								Intent i = new Intent(MainActivity.this, Index.class);     
 								startActivity(i);
 								finish();

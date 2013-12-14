@@ -12,9 +12,10 @@
     <string name="register">Register</string>
     <string name="log_in">Log In</string>
     <string name="sign_in">Sign In</string>
-    <string name="username2">Username</string>
+    <string name="blank">Blank</string>
+    <string name="username2">Username:</string>
     <string name="title_activity_index">Index</string>
-    <string name="rating">Rating</string>
+    <string name="rating">Rating:</string>
     <string name="posts">Posts:</string>
     <string name="newPost">New Post</string>
     <string name="publicPost">Public</string>
@@ -29,15 +30,33 @@
     <string name="newstep">Start New Step</string>
     <string name="comment">Comment</string>
     <string name="hard">Hard</string>
-    <string name="postName">Post Name:</string>
+    <string name="postName">Post Name</string>
     <string name="privatePost">Private</string>
-    <string name="difficulty">Difficulty:</string>
+    <string name="difficulty">Difficulty</string>
     <string name="title_activity_browse">Browse</string>
-    <string name="zero">0</string>
+    <string name="category">Category:</string>
     <string name="step">Step</string>
     <string name="comments">Comments:</string>
     <string name="picture">Take Picture</string>
     <string name="toolbox">Step1</string>
+    
+    <string name="category_prompt">Pick a Category</string>
+ 
+    <string-array name="category_arrays">
+        <item>Computers and Electronics</item>
+        <item>Hobbies and Crafts</item>
+        <item>Cars and Other Vehicles</item>
+        <item>Sports</item>
+        <item>Home and Garden</item>
+        <item>Educational</item>
+        <item>Personal Care and Style</item>
+        <item>Arts</item>
+        <item>Health</item>
+        <item>Finance, Business and Legal</item>
+        <item>Food, Kitchen and Appliances</item>
+        <item>Other</item>
+        
+    </string-array>
 
     <string-array name="Sorting">
         <item>Popular</item>

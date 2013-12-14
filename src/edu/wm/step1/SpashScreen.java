@@ -4,6 +4,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import com.loopj.android.http.JsonHttpResponseHandler;
+import com.loopj.android.http.PersistentCookieStore;
 
 import edu.wm.step1.MainActivity;
 import edu.wm.step1.R;
@@ -20,6 +21,7 @@ public class SpashScreen extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.splash_screen);
 		Log.v("testing", "spash screen");
@@ -35,9 +37,11 @@ public class SpashScreen extends Activity {
                 	@Override
                 	public void onSuccess(JSONObject response) {
                 		try {
+                			
 							String message = response.getString("message");
 						
 							if(message.equals("signed in")){
+								
 								Intent i = new Intent(SpashScreen.this, Index.class);     
 							       startActivity(i);
 							       
