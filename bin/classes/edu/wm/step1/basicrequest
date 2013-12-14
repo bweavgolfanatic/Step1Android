@@ -1,0 +1,18 @@
+SplashScreen.myClient.get(context,"http://step1.herokuapp.com/am_i_signed_in.json", new JsonHttpResponseHandler() {
+    	        		@Override
+    	                public void onSuccess(JSONObject responseMSG) {
+    	                    try {
+    	                        String msg = responseMSG.getString("message");       	
+    	                        }
+    	                        else{
+
+    	                        }
+
+    	                    } catch (JSONException e) {
+    	                        e.printStackTrace();
+    	                    }
+    	        	}
+    	        	
+    	        	
+    	            
+    	        });

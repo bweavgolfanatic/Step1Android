@@ -33,7 +33,6 @@ public final class R {
         public static final int TableLayout1=0x7f090011;
         public static final int action_settings=0x7f090034;
         public static final int browseButton=0x7f09000e;
-        public static final int button1=0x7f090005;
         public static final int button2=0x7f090000;
         public static final int button3=0x7f090001;
         public static final int category=0x7f09002b;
@@ -43,6 +42,7 @@ public final class R {
         public static final int listView1=0x7f090002;
         public static final int logInButton=0x7f090019;
         public static final int login=0x7f090013;
+        public static final int logout=0x7f090005;
         public static final int myPostsButton=0x7f09000c;
         public static final int newPost=0x7f090025;
         public static final int newPostButton=0x7f090010;
@@ -121,6 +121,7 @@ public final class R {
         public static final int hello_world=0x7f050002;
         public static final int lastname=0x7f050007;
         public static final int log_in=0x7f050009;
+        public static final int logout=0x7f05002e;
         public static final int medium=0x7f050019;
         public static final int myPosts=0x7f050014;
         public static final int newPost=0x7f050010;

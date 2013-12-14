@@ -114,4 +114,13 @@
         android:layout_marginTop="34dp"
         android:text="@string/newPost" />
 
+    <Button
+        android:id="@+id/logout"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/logout" />
+
 </RelativeLayout>

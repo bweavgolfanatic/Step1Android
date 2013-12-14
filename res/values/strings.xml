@@ -32,7 +32,7 @@
     <string name="hard">Hard</string>
     <string name="postName">Post Name</string>
     <string name="privatePost">Private</string>
-    <string name="difficulty">Difficulty</string>
+    <string name="difficulty">Difficulty (1-10)</string>
     <string name="title_activity_browse">Browse</string>
     <string name="category">Category:</string>
     <string name="step">Step</string>
@@ -71,5 +71,6 @@
     <string name="title_activity_create_step">CreateStep</string>
     <string name="title_activity_my_posts">MyPosts</string>
     <string name="title_activity_spash_screen">SpashScreen</string>
+    <string name="logout">log out</string>
 
 </resources>

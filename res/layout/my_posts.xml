@@ -65,7 +65,7 @@
         android:text="@string/blank" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/logout"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
@@ -78,8 +78,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
+        android:layout_alignBaseline="@+id/logout"
+        android:layout_alignBottom="@+id/logout"
         android:layout_alignParentRight="true"
         android:text="@string/next" />
 
@@ -98,7 +98,7 @@
         android:layout_width="160dp"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/numPosts"
-        android:layout_alignLeft="@+id/button1"
+        android:layout_alignLeft="@+id/logout"
         android:layout_alignRight="@+id/button2"
         android:layout_alignTop="@+id/view1" >
 

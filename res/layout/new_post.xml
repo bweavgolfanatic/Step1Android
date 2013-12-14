@@ -55,7 +55,8 @@
         android:layout_alignParentRight="true"
         android:layout_marginBottom="40dp"
         android:ems="10"
-        android:hint="@string/difficulty" />
+        android:hint="@string/difficulty"
+        android:inputType="number" />
 
     <EditText
         android:id="@+id/postName"
@@ -65,7 +66,8 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:ems="10"
-        android:hint="@string/postName" >
+        android:hint="@string/postName"
+        android:inputType="text" >
 
         <requestFocus />
     </EditText>
