@@ -61,6 +61,17 @@ public class Browse extends Activity {
 					public void onSuccess(JSONObject responseMSG) {
 
 						Log.v(LOG_TAG, "populating latest Posts List");
+						listContents.clear();
+						int i= 1;
+						while (i<=responseMSG.length()){
+							try {
+								listContents.add((String)responseMSG.get(Integer.toString(i)));
+								i++;
+							} catch (JSONException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+						}/*
 						Iterator<?> keys = responseMSG.keys();
 						listContents.clear();
 						while(keys.hasNext())
@@ -76,7 +87,7 @@ public class Browse extends Activity {
 								e.printStackTrace();
 							}
 
-						}
+						}*/
 						postAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContents){
 						    @Override
 						    public View getView(int position, View convertView, ViewGroup parent) {
@@ -120,21 +131,17 @@ public class Browse extends Activity {
 						public void onSuccess(JSONObject responseMSG) {
 
 							Log.v(LOG_TAG, "populating oldest Posts List");
-							Iterator<?> keys = responseMSG.keys();
+							//Iterator<?> keys = responseMSG.keys();
 							listContents.clear();
-							while(keys.hasNext())
-							{
+							int i = 1;
+							while (i<=responseMSG.length()){
 								try {
-									String key = (String)keys.next();
-									Log.v(LOG_TAG, (String) responseMSG.get(key));
-									
-									listContents.add((String) responseMSG.get(key));
-									
+									listContents.add((String)responseMSG.get(Integer.toString(i)));
+									i++;
 								} catch (JSONException e) {
 									// TODO Auto-generated catch block
 									e.printStackTrace();
 								}
-
 							}
 							postAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContents){
 							    @Override
@@ -178,20 +185,17 @@ public class Browse extends Activity {
 						public void onSuccess(JSONObject responseMSG) {
 
 							Log.v(LOG_TAG, "populating Popluar Posts List");
-							Iterator<?> keys = responseMSG.keys();
+							//Iterator<?> keys = responseMSG.keys();
 							listContents.clear();
-							while(keys.hasNext())
-							{
+							int i = 1;
+							while (i<=responseMSG.length()){
 								try {
-									String key = (String)keys.next();
-									Log.v(LOG_TAG, (String) responseMSG.get(key));
-									
-									listContents.add((String) responseMSG.get(key));
+									listContents.add((String)responseMSG.get(Integer.toString(i)));
+									i++;
 								} catch (JSONException e) {
 									// TODO Auto-generated catch block
 									e.printStackTrace();
 								}
-
 							}
 							postAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContents){
 							    @Override
@@ -411,8 +415,8 @@ public class Browse extends Activity {
 					Log.v(LOG_TAG, "clicking search Button");
 					String title = search_by_title.getText().toString();
 					RequestParams params = new RequestParams();
-					params.put("title", title);
-					/*SplashScreen.myClient.get("http://step1.herokuapp.com/search_posts.json", params,  new JsonHttpResponseHandler() {
+					params.put("search", title);
+					SplashScreen.myClient.get("http://step1.herokuapp.com/search_posts.json", params,  new JsonHttpResponseHandler() {
 						@Override
 						public void onSuccess(JSONObject responseMSG) {
 
@@ -451,6 +455,10 @@ public class Browse extends Activity {
 									String post = postAdapter.getItem(position);
 									Log.v(LOG_TAG, "post: " + post);
 									//eventually go to post in ViewPost (with comments, etc.)
+									Context context = getApplicationContext();
+		                        	Intent intent = new Intent(context, ViewPost.class);
+		                        	intent.putExtra("post", post);
+		                        	startActivity(intent);
 								}
 							});
 						}
@@ -461,7 +469,7 @@ public class Browse extends Activity {
 			    		} 
 
 
-						});*/
+						});
 
 
 				}
@@ -589,6 +597,62 @@ public class Browse extends Activity {
 				public void onClick(View v) {
 					Log.v(LOG_TAG, "clicking search Button");
 					String title = search_by_title.getText().toString();
+					RequestParams params = new RequestParams();
+					params.put("search", title);
+					SplashScreen.myClient.get("http://step1.herokuapp.com/search_posts.json", params,  new JsonHttpResponseHandler() {
+						@Override
+						public void onSuccess(JSONObject responseMSG) {
+
+							Log.v(LOG_TAG, "populating search Posts List");
+							Iterator<?> keys = responseMSG.keys();
+							listContents.clear();
+							while(keys.hasNext())
+							{
+								try {
+									String key = (String)keys.next();
+									Log.v(LOG_TAG, (String) responseMSG.get(key));
+
+									listContents.add((String) responseMSG.get(key));
+								} catch (JSONException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+
+							}
+							postAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContents){
+							    @Override
+							    public View getView(int position, View convertView, ViewGroup parent) {
+							        View view = super.getView(position, convertView, parent);
+							        TextView text = (TextView) view.findViewById(android.R.id.text1);
+							        text.setTextColor(Color.BLACK);
+							        return view;
+							    }
+							};
+							posts_list.setAdapter(postAdapter);
+							posts_list.setOnItemClickListener( new OnItemClickListener() {
+
+
+								@Override
+								public void onItemClick(AdapterView<?> arg0, View arg1,
+										int position, long id) {
+									String post = postAdapter.getItem(position);
+									Log.v(LOG_TAG, "post: " + post);
+									//eventually go to post in ViewPost (with comments, etc.)
+									Context context = getApplicationContext();
+		                        	Intent intent = new Intent(context, ViewPost.class);
+		                        	intent.putExtra("post", post);
+		                        	startActivity(intent);
+								}
+							});
+						}
+						@Override
+			    		public void onFailure(Throwable arg0,String response) {
+
+			    			Log.d(LOG_TAG, "Search Posts didn't work" );        
+			    		} 
+
+
+						});
 
 
 				}
@@ -718,6 +782,62 @@ public class Browse extends Activity {
 				public void onClick(View v) {
 					Log.v(LOG_TAG, "clicking search Button");
 					String title = search_by_title.getText().toString();
+					RequestParams params = new RequestParams();
+					params.put("search", title);
+					SplashScreen.myClient.get("http://step1.herokuapp.com/search_posts.json", params,  new JsonHttpResponseHandler() {
+						@Override
+						public void onSuccess(JSONObject responseMSG) {
+
+							Log.v(LOG_TAG, "populating search Posts List");
+							Iterator<?> keys = responseMSG.keys();
+							listContents.clear();
+							while(keys.hasNext())
+							{
+								try {
+									String key = (String)keys.next();
+									Log.v(LOG_TAG, (String) responseMSG.get(key));
+
+									listContents.add((String) responseMSG.get(key));
+								} catch (JSONException e) {
+									// TODO Auto-generated catch block
+									e.printStackTrace();
+								}
+
+							}
+							postAdapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, listContents){
+							    @Override
+							    public View getView(int position, View convertView, ViewGroup parent) {
+							        View view = super.getView(position, convertView, parent);
+							        TextView text = (TextView) view.findViewById(android.R.id.text1);
+							        text.setTextColor(Color.BLACK);
+							        return view;
+							    }
+							};
+							posts_list.setAdapter(postAdapter);
+							posts_list.setOnItemClickListener( new OnItemClickListener() {
+
+
+								@Override
+								public void onItemClick(AdapterView<?> arg0, View arg1,
+										int position, long id) {
+									String post = postAdapter.getItem(position);
+									Log.v(LOG_TAG, "post: " + post);
+									//eventually go to post in ViewPost (with comments, etc.)
+									Context context = getApplicationContext();
+		                        	Intent intent = new Intent(context, ViewPost.class);
+		                        	intent.putExtra("post", post);
+		                        	startActivity(intent);
+								}
+							});
+						}
+						@Override
+			    		public void onFailure(Throwable arg0,String response) {
+
+			    			Log.d(LOG_TAG, "Search Posts didn't work" );        
+			    		} 
+
+
+						});
 
 
 				}

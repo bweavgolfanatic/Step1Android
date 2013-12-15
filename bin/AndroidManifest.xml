@@ -16,33 +16,14 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
-        <activity
-            android:name="edu.wm.step1.MainActivity" />
-
-
-        <activity
-            android:name="edu.wm.step1.Index"
-
-        />
-        <activity
-            android:name="edu.wm.step1.NewPost"
-
-        />
-        <activity
-            android:name="edu.wm.step1.Browse"
-  />
-        <activity
-            android:name="edu.wm.step1.ViewPost"
-/>
-        <activity
-            android:name="edu.wm.step1.ViewStep"
-/>
-        <activity
-            android:name="edu.wm.step1.CreateStep"
-            />
-        <activity
-            android:name="edu.wm.step1.MyPosts"
-            />
+        <activity android:name="edu.wm.step1.MainActivity" />
+        <activity android:name="edu.wm.step1.Index" />
+        <activity android:name="edu.wm.step1.NewPost" />
+        <activity android:name="edu.wm.step1.Browse" />
+        <activity android:name="edu.wm.step1.ViewPost" />
+        <activity android:name="edu.wm.step1.ViewStep" />
+        <activity android:name="edu.wm.step1.CreateStep" />
+        <activity android:name="edu.wm.step1.MyPosts" />
         <!-- Splash screen -->
         <activity
             android:name="edu.wm.step1.SplashScreen"
@@ -51,9 +32,13 @@
             android:theme="@android:style/Theme.Black.NoTitleBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
- 
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.wm.step1.UserPosts"
+            android:label="@string/title_activity_user_posts" >
         </activity>
     </application>
 

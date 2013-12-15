@@ -11,6 +11,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
+import android.view.View;
 import android.widget.*;
 
 public class ViewPost extends Activity {
@@ -88,6 +89,39 @@ public class ViewPost extends Activity {
 
 
 		});
+		
+		view_first_step.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
+				//startActivity(i);
+			}
+		});
+		
+		comment.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, Comment.class);     
+				//startActivity(i);
+			}
+		});
+		
+		post_user.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+            	Log.v(LOG_TAG, post_user.toString());
+                // TODO Auto-generated method stub
+            	Intent i = new Intent(ViewPost.this, UserPosts.class);
+            	i.putExtra("username", post_user.getText().toString());
+            	startActivity(i);
+
+            }
+        });
 
 	}
 
@@ -155,6 +189,40 @@ public class ViewPost extends Activity {
 
 
 		});
+		
+		view_first_step.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
+				//startActivity(i);
+			}
+		});
+		
+		comment.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, Comment.class);     
+				//startActivity(i);
+			}
+		});
+		
+		post_user.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+            	Log.v(LOG_TAG, post_user.toString());
+                // TODO Auto-generated method stub
+            	Intent i = new Intent(ViewPost.this, UserPosts.class);
+            	i.putExtra("username", post_user.getText().toString());
+            	startActivity(i);
+
+            }
+        });
+
 
 	}
 
@@ -222,6 +290,40 @@ public class ViewPost extends Activity {
 
 
 		});
+		
+		view_first_step.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
+				//startActivity(i);
+			}
+		});
+		
+		comment.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking view first step Button");
+				//pass extras of post name/id?
+				//Intent i = new Intent(ViewPost.this, Comment.class);     
+				//startActivity(i);
+			}
+		});
+		
+		post_user.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+            	Log.v(LOG_TAG, post_user.toString());
+                // TODO Auto-generated method stub
+            	Intent i = new Intent(ViewPost.this, UserPosts.class);
+            	i.putExtra("username", post_user.getText().toString());
+            	startActivity(i);
+
+            }
+        });
+
 
 
 	}

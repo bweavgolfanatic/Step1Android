@@ -106,7 +106,8 @@ public class Index extends Activity {
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking myPosts Button");
 				//check if browse possible?
-				Intent i = new Intent(Index.this, MyPosts.class);     
+				Intent i = new Intent(Index.this, MyPosts.class);  
+				i.putExtra("username", usernameText.getText().toString());
 				startActivity(i);
 			}
 		});
