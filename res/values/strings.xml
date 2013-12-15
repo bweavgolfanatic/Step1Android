@@ -27,7 +27,7 @@
     <string name="easy">Easy</string>
     <string name="of">Of</string>
     <string name="medium">Medium</string>
-    <string name="newstep">Start New Step</string>
+    <string name="newstep">View First Step</string>
     <string name="comment">Comment</string>
     <string name="hard">Hard</string>
     <string name="postName">Post Name</string>
@@ -39,6 +39,14 @@
     <string name="comments">Comments:</string>
     <string name="picture">Take Picture</string>
     <string name="toolbox">Step1</string>
+    <string name="oldest">Oldest</string>
+    <string name="latest">Latest</string>
+    <string name="popular">Popular</string>
+	<string name="category2">Category</string>
+	<string name="sorting">Sorting:</string>
+	<string name="search">Search</string>
+	<string name="search_by_title">Search By Title</string>
+	<string name="sort">Sort</string>
     
     <string name="category_prompt">Pick a Category</string>
  

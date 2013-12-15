@@ -4,9 +4,7 @@ SplashScreen.myClient.get(context,"http://step1.herokuapp.com/am_i_signed_in.jso
     	                    try {
     	                        String msg = responseMSG.getString("message");       	
     	                        }
-    	                        else{
-
-    	                        }
+    	                        
 
     	                    } catch (JSONException e) {
     	                        e.printStackTrace();
