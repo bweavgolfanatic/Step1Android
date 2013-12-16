@@ -28,8 +28,9 @@ public class ViewStep extends Activity {
 	private ImageView stepImage;
 	private String next_step_id;
 	private Button next;
-	private Button previous;
+	private Button comment;
 	private String first_step_id;
+	private String post;
 
 
 	@Override
@@ -43,20 +44,27 @@ public class ViewStep extends Activity {
 
 		stepImage = (ImageView)findViewById(R.id.imageView1);
 
-		previous = (Button)findViewById(R.id.button1);
+		comment = (Button)findViewById(R.id.button1);
 		next = (Button)findViewById(R.id.button2);
 
 		Intent intent = getIntent();
 		first_step_id = intent.getExtras().getString("first_step_id");
 		num_steps = intent.getExtras().getString("num_steps");
 		current_step = intent.getExtras().getInt("current_step");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"first step id: "+ first_step_id);
 		Log.v(LOG_TAG,"total steps: " + num_steps);
 		Log.v(LOG_TAG,"current_step is: " + current_step);
+		Log.v(LOG_TAG,"post name: " + post);
 
 
 		curStep.setText(Integer.toString(current_step));
 		totalSteps.setText(num_steps);
+		
+		if(Integer.toString(current_step).equals(num_steps)){
+			Log.v(LOG_TAG, "setting next to finish");
+			next.setText("Finish");
+		}
 
 
 		SplashScreen.myClient.get(getApplicationContext(), "http://step1.herokuapp.com/steps/" + first_step_id + ".json",  new JsonHttpResponseHandler() {
@@ -75,6 +83,8 @@ public class ViewStep extends Activity {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				
+			
 
 
 			}
@@ -82,7 +92,7 @@ public class ViewStep extends Activity {
 			@Override
 			public void onFailure(Throwable arg0,String response) {
 
-				Log.d(LOG_TAG, "steps/x/.json didn't work" );        
+				Log.d(LOG_TAG, "steps/" + first_step_id + "/.json didn't work" );        
 			} 
 
 
@@ -93,11 +103,19 @@ public class ViewStep extends Activity {
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking next step Button");
 				Log.v(LOG_TAG,"next step id: " + next_step_id);
+				if(next.getText().equals("Finish")){
+					Intent intent = new Intent(ViewStep.this, ViewPost.class);
+					intent.putExtra("post", post);
+					startActivity(intent);
+					finish();
+				}
+						
 				if(!next_step_id.equals("-5")){
 					Intent intent = new Intent(ViewStep.this, ViewStep.class);
 					intent.putExtra("first_step_id", next_step_id);
 					intent.putExtra("num_steps",num_steps);
 					intent.putExtra("current_step", current_step+1 );
+					intent.putExtra("post", post);
 					startActivity(intent);
 				}
 
@@ -120,13 +138,14 @@ public class ViewStep extends Activity {
 
 		stepImage = (ImageView)findViewById(R.id.imageView1);
 
-		previous = (Button)findViewById(R.id.button1);
+		comment = (Button)findViewById(R.id.button1);
 		next = (Button)findViewById(R.id.button2);
 
 		Intent intent = getIntent();
 		first_step_id = intent.getExtras().getString("first_step_id");
 		num_steps = intent.getExtras().getString("num_steps");
 		current_step = intent.getExtras().getInt("current_step");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"first step id: "+ first_step_id);
 		Log.v(LOG_TAG,"total steps: " + num_steps);
 		Log.v(LOG_TAG,"current_step is: " + current_step);
@@ -134,6 +153,11 @@ public class ViewStep extends Activity {
 
 		curStep.setText(Integer.toString(current_step));
 		totalSteps.setText(num_steps);
+		
+		if(Integer.toString(current_step).equals(num_steps)){
+			Log.v(LOG_TAG, "setting next to finish");
+			next.setText("Finish");
+		}
 
 
 		SplashScreen.myClient.get(getApplicationContext(), "http://step1.herokuapp.com/steps/" + first_step_id + ".json",  new JsonHttpResponseHandler() {
@@ -159,7 +183,7 @@ public class ViewStep extends Activity {
 			@Override
 			public void onFailure(Throwable arg0,String response) {
 
-				Log.d(LOG_TAG, "steps/x/.json didn't work" );        
+				Log.d(LOG_TAG, "steps/" + first_step_id + "/.json didn't work" );          
 			} 
 
 
@@ -169,12 +193,23 @@ public class ViewStep extends Activity {
 			@Override
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking next step Button");
-				Log.v(LOG_TAG,"next step id: " + next_step_id);
-				Intent intent = new Intent(ViewStep.this, ViewStep.class);
-				intent.putExtra("first_step_id", next_step_id);
-				intent.putExtra("num_steps",num_steps);
-				intent.putExtra("current_step", current_step+1 );
-				startActivity(intent);
+				
+				if(next.getText().equals("Finish")){
+					Intent intent = new Intent(ViewStep.this, ViewPost.class);
+					intent.putExtra("post", post);
+					startActivity(intent);
+					finish();
+				}
+				
+				if(!next_step_id.equals("-5")){
+					Log.v(LOG_TAG,"next step id: " + next_step_id);
+					Intent intent = new Intent(ViewStep.this, ViewStep.class);
+					intent.putExtra("first_step_id", next_step_id);
+					intent.putExtra("num_steps",num_steps);
+					intent.putExtra("current_step", current_step+1 );
+					intent.putExtra("post", post);
+					startActivity(intent);
+				}
 
 			}
 		});
@@ -192,13 +227,14 @@ public class ViewStep extends Activity {
 
 		stepImage = (ImageView)findViewById(R.id.imageView1);
 
-		previous = (Button)findViewById(R.id.button1);
+		comment = (Button)findViewById(R.id.button1);
 		next = (Button)findViewById(R.id.button2);
 
 		Intent intent = getIntent();
 		first_step_id = intent.getExtras().getString("first_step_id");
 		num_steps = intent.getExtras().getString("num_steps");
 		current_step = intent.getExtras().getInt("current_step");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"first step id: "+ first_step_id);
 		Log.v(LOG_TAG,"total steps: " + num_steps);
 		Log.v(LOG_TAG,"current_step is: " + current_step);
@@ -206,6 +242,11 @@ public class ViewStep extends Activity {
 
 		curStep.setText(Integer.toString(current_step));
 		totalSteps.setText(num_steps);
+		
+		if(Integer.toString(current_step).equals(num_steps)){
+			Log.v(LOG_TAG, "setting next to finish");
+			next.setText("Finish");
+		}
 
 
 		SplashScreen.myClient.get(getApplicationContext(), "http://step1.herokuapp.com/steps/" + first_step_id + ".json",  new JsonHttpResponseHandler() {
@@ -231,7 +272,7 @@ public class ViewStep extends Activity {
 			@Override
 			public void onFailure(Throwable arg0,String response) {
 
-				Log.d(LOG_TAG, "steps/x/.json didn't work" );        
+				Log.d(LOG_TAG, "steps/" + first_step_id + "/.json didn't work" );        
 			} 
 
 
@@ -241,12 +282,23 @@ public class ViewStep extends Activity {
 			@Override
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking next step Button");
-				Log.v(LOG_TAG,"next step id: " + next_step_id);
-				Intent intent = new Intent(ViewStep.this, ViewStep.class);
-				intent.putExtra("first_step_id", next_step_id);
-				intent.putExtra("num_steps",num_steps);
-				intent.putExtra("current_step", current_step+1 );
-				startActivity(intent);
+				
+				if(next.getText().equals("Finish")){
+					Intent intent = new Intent(ViewStep.this, ViewPost.class);
+					intent.putExtra("post", post);
+					startActivity(intent);
+					finish();
+				}
+				
+				if(!next_step_id.equals("-5")){
+					Log.v(LOG_TAG,"next step id: " + next_step_id);
+					Intent intent = new Intent(ViewStep.this, ViewStep.class);
+					intent.putExtra("first_step_id", next_step_id);
+					intent.putExtra("num_steps",num_steps);
+					intent.putExtra("current_step", current_step+1 );
+					intent.putExtra("post", post);
+					startActivity(intent);
+				}
 
 			}
 		});

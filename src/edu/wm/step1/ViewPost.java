@@ -25,6 +25,7 @@ public class ViewPost extends Activity {
 	private String first_step_id;
 	private String num_steps;
 	private int current_step = 1;
+	private String post;
 
 	private Button view_first_step;
 	private Button comment;
@@ -42,7 +43,7 @@ public class ViewPost extends Activity {
 		comment = (Button)findViewById(R.id.comment);
 
 		Intent intent = getIntent();
-		String post = intent.getExtras().getString("post");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"post:"+ post);
 		RequestParams params = new RequestParams();
 		params.put("title", post);
@@ -107,6 +108,7 @@ public class ViewPost extends Activity {
             	i.putExtra("first_step_id", first_step_id);
             	i.putExtra("num_steps",num_steps);
             	i.putExtra("current_step", current_step);
+            	i.putExtra("post", post);
             	startActivity(i);
 			}
 		});
@@ -150,7 +152,7 @@ public class ViewPost extends Activity {
 		comment = (Button)findViewById(R.id.comment);
 
 		Intent intent = getIntent();
-		String post = intent.getExtras().getString("post");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"post:"+ post);
 		RequestParams params = new RequestParams();
 		params.put("title", post);
@@ -214,6 +216,7 @@ public class ViewPost extends Activity {
             	i.putExtra("first_step_id", first_step_id);
             	i.putExtra("num_steps",num_steps);
             	i.putExtra("current_step", current_step);
+            	i.putExtra("post", post);
             	startActivity(i);
 			}
 		});
@@ -258,7 +261,7 @@ public class ViewPost extends Activity {
 		comment = (Button)findViewById(R.id.comment);
 
 		Intent intent = getIntent();
-		String post = intent.getExtras().getString("post");
+		post = intent.getExtras().getString("post");
 		Log.v(LOG_TAG,"post:"+ post);
 		RequestParams params = new RequestParams();
 		params.put("title", post);
@@ -322,6 +325,7 @@ public class ViewPost extends Activity {
             	i.putExtra("first_step_id", first_step_id);
             	i.putExtra("num_steps",num_steps);
             	i.putExtra("current_step", current_step);
+            	i.putExtra("post", post);
             	startActivity(i);
 			}
 		});

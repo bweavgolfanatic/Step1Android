@@ -49,6 +49,7 @@
     <string name="sort">Sort</string>
     <string name="upload">Upload Photo</string>
     <string name="category_prompt">Pick a Category</string>
+    <string name="finish">Finish</string>
 
     <string-array name="category_arrays">
         <item>Computers and Electronics</item>

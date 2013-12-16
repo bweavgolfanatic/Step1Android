@@ -9,16 +9,6 @@
     tools:context=".ViewStep" >
 
     <TextView
-        android:id="@+id/stepTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="34dp"
-        android:text="@string/step"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
         android:id="@+id/curStep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -49,15 +39,6 @@
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_alignLeft="@+id/stepTitle"
-        android:layout_below="@+id/stepTitle"
-        android:layout_marginTop="24dp"
-        android:background="#000000" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
@@ -65,7 +46,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_toLeftOf="@+id/post_user"
-        android:text="@string/previous" />
+        android:text="@string/comment" />
 
     <Button
         android:id="@+id/button2"
@@ -95,5 +76,22 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/stepText"
         android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/stepTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentTop="true"
+        android:text="@string/step"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignLeft="@+id/stepTitle"
+        android:layout_below="@+id/post_user"
+        android:background="#000000" />
 
 </RelativeLayout>
