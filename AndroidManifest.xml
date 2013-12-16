@@ -29,6 +29,8 @@
         <activity android:name="edu.wm.step1.CreateStep" />
         <activity android:name="edu.wm.step1.MyPosts" />
         <activity android:name="edu.wm.step1.PostComments" />
+        <activity android:name="edu.wm.step1.UserPosts" />
+        
         
         <!-- Splash screen -->
         <activity

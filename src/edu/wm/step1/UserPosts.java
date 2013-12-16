@@ -65,14 +65,17 @@ public class UserPosts extends Activity {
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
                 Log.v(LOG_TAG,"username: "+ post);
-
-                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/my_details.json", new JsonHttpResponseHandler() {
+                RequestParams params2 = new RequestParams();
+                params2.put("username", post);
+                username.setText(post);
+                usernameString = post;
+                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/user_details.json", params2, new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject response) {
                                 try {
 
-                                        username.setText(response.getString("username"));
-                                        usernameString = response.getString("username");
+                                        
+                                       
                                         Log.v(LOG_TAG,usernameString);
                                         //intent.putExtra("username", usernameString);
                                         rating.setText(response.getString("rating"));
@@ -180,14 +183,17 @@ public class UserPosts extends Activity {
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
                 Log.v(LOG_TAG,"username: "+ post);
-
-                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/my_details.json", new JsonHttpResponseHandler() {
+                RequestParams params2 = new RequestParams();
+                params2.put("username", post);
+                username.setText(post);
+                usernameString = post;
+                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/user_details.json", params2, new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject response) {
                                 try {
 
-                                        username.setText(response.getString("username"));
-                                        usernameString = response.getString("username");
+                                        
+                                       
                                         Log.v(LOG_TAG,usernameString);
                                         //intent.putExtra("username", usernameString);
                                         rating.setText(response.getString("rating"));
@@ -292,14 +298,17 @@ public class UserPosts extends Activity {
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
                 Log.v(LOG_TAG,"username: "+ post);
-
-                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/my_details.json", new JsonHttpResponseHandler() {
+                RequestParams params2 = new RequestParams();
+                params2.put("username", post);
+                username.setText(post);
+                usernameString = post;
+                SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/user_details.json", params2, new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject response) {
                                 try {
 
-                                        username.setText(response.getString("username"));
-                                        usernameString = response.getString("username");
+                                        
+                                       
                                         Log.v(LOG_TAG,usernameString);
                                         //intent.putExtra("username", usernameString);
                                         rating.setText(response.getString("rating"));

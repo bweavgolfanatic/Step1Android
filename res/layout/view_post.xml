@@ -18,34 +18,6 @@
         android:layout_marginBottom="67dp"
         android:text="@string/comment" />
 
-    <Button
-        android:id="@+id/view_first_step"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/comment"
-        android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/view1"
-        android:layout_marginBottom="35dp"
-        android:text="@string/newstep" />
-
-    <View
-        android:id="@+id/view1"
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:background="#000000" />
-
-    <TextView
-        android:id="@+id/post_user"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/curStep"
-        android:layout_below="@+id/totalSteps"
-        android:layout_marginTop="33dp"
-        android:text="@string/users"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
     <TextView
         android:id="@+id/totalSteps"
         android:layout_width="wrap_content"
@@ -54,26 +26,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="16dp"
         android:text="@string/postName"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/curStep"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/stepTitle"
-        android:layout_below="@+id/stepTitle"
-        android:layout_marginTop="18dp"
-        android:text="@string/rating"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/stepTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/view1"
-        android:layout_below="@+id/post_user"
-        android:layout_marginTop="27dp"
-        android:text="@string/difficulty"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
@@ -101,6 +53,62 @@
         android:layout_height="wrap_content"
         android:layout_alignBottom="@+id/curStep"
         android:layout_alignLeft="@+id/textView2"
+        android:text="@string/rating"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <RatingBar
+        android:id="@+id/ratingBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/view_first_step"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comment"
+        android:layout_alignLeft="@+id/view1"
+        android:layout_alignRight="@+id/view1"
+        android:text="@string/newstep" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_above="@+id/view_first_step"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_marginBottom="32dp"
+        android:background="#000000" />
+
+    <TextView
+        android:id="@+id/post_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/totalSteps"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/totalSteps"
+        android:text="@string/users"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/stepTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/post_user"
+        android:layout_below="@+id/post_user"
+        android:layout_marginTop="25dp"
+        android:text="@string/hard"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/curStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stepTitle"
+        android:layout_marginTop="20dp"
+        android:layout_toRightOf="@+id/totalSteps"
         android:text="@string/rating"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
