@@ -9,7 +9,7 @@
     tools:context=".ViewStep" >
 
     <TextView
-        android:id="@+id/post_difficulty"
+        android:id="@+id/stepTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -19,13 +19,13 @@
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/post_rating"
+        android:id="@+id/curStep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/post_difficulty"
-        android:layout_alignBottom="@+id/post_difficulty"
+        android:layout_alignBaseline="@+id/stepTitle"
+        android:layout_alignBottom="@+id/stepTitle"
         android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/post_difficulty"
+        android:layout_toRightOf="@+id/stepTitle"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -33,13 +33,13 @@
         android:id="@+id/post_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/post_rating"
+        android:layout_alignBottom="@+id/curStep"
         android:layout_centerHorizontal="true"
         android:text="@string/of"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/post_name"
+        android:id="@+id/totalSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/post_user"
@@ -53,19 +53,36 @@
         android:id="@+id/view1"
         android:layout_width="fill_parent"
         android:layout_height="1dip"
-        android:layout_alignLeft="@+id/post_difficulty"
-        android:layout_below="@+id/post_difficulty"
+        android:layout_alignLeft="@+id/stepTitle"
+        android:layout_below="@+id/stepTitle"
         android:layout_marginTop="24dp"
         android:background="#000000" />
 
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/post_rating"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/post_user"
+        android:text="@string/previous" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/post_user"
+        android:text="@string/next" />
+
+    <TextView
+        android:id="@+id/stepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/view1"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -73,19 +90,10 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_marginTop="64dp"
-        android:layout_toLeftOf="@+id/post_name"
-        android:src="@drawable/ic_launcher" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@+id/button1"
         android:layout_alignParentLeft="true"
-        android:layout_marginBottom="63dp"
-        android:text="@string/comments"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/stepText"
+        android:src="@drawable/ic_launcher" />
 
 </RelativeLayout>

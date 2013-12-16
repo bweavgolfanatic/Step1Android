@@ -33,11 +33,13 @@ public final class R {
         public static final int TableLayout1=0x7f09001c;
         public static final int action_settings=0x7f090043;
         public static final int browseButton=0x7f090019;
+        public static final int button1=0x7f090041;
         public static final int button2=0x7f09000e;
         public static final int button3=0x7f09000f;
         public static final int category=0x7f09000c;
         public static final int categoryText=0x7f09000b;
         public static final int comment=0x7f09003c;
+        public static final int curStep=0x7f09003f;
         public static final int difficulty=0x7f090039;
         public static final int imageView1=0x7f090010;
         public static final int latest=0x7f090006;
@@ -56,9 +58,6 @@ public final class R {
         public static final int passwordField2=0x7f09002a;
         public static final int popular=0x7f090008;
         public static final int postName=0x7f09003a;
-        public static final int post_difficulty=0x7f09003b;
-        public static final int post_name=0x7f090040;
-        public static final int post_rating=0x7f09003f;
         public static final int post_user=0x7f09003e;
         public static final int posts_list=0x7f090001;
         public static final int privateButton=0x7f090036;
@@ -74,6 +73,8 @@ public final class R {
         public static final int sorting=0x7f090004;
         public static final int sortingText=0x7f090005;
         public static final int startButton=0x7f090038;
+        public static final int stepText=0x7f090042;
+        public static final int stepTitle=0x7f09003b;
         public static final int tableRow1=0x7f09001d;
         public static final int tableRow10=0x7f09002d;
         public static final int tableRow2=0x7f09001f;
@@ -86,8 +87,7 @@ public final class R {
         public static final int textView1=0x7f090033;
         public static final int textView2=0x7f090030;
         public static final int textView3=0x7f090031;
-        public static final int textView5=0x7f090041;
-        public static final int textView6=0x7f090042;
+        public static final int totalSteps=0x7f090040;
         public static final int uploadButton=0x7f090032;
         public static final int username=0x7f090009;
         public static final int usernameField=0x7f090020;

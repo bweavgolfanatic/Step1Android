@@ -22,6 +22,9 @@ public class ViewPost extends Activity {
 	private TextView post_name;
 	private TextView post_rating;
 	private TextView post_user;
+	private String first_step_id;
+	private String num_steps;
+	private int current_step = 1;
 
 	private Button view_first_step;
 	private Button comment;
@@ -30,10 +33,10 @@ public class ViewPost extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.view_post);
-		post_difficulty = (TextView)findViewById(R.id.post_difficulty);
-		post_name = (TextView)findViewById(R.id.post_name);
+		post_difficulty = (TextView)findViewById(R.id.stepTitle);
+		post_name = (TextView)findViewById(R.id.totalSteps);
 		post_user = (TextView)findViewById(R.id.post_user);
-		post_rating = (TextView)findViewById(R.id.post_rating);
+		post_rating = (TextView)findViewById(R.id.curStep);
 
 		view_first_step = (Button)findViewById(R.id.view_first_step);
 		comment = (Button)findViewById(R.id.comment);
@@ -48,9 +51,12 @@ public class ViewPost extends Activity {
 			@Override
 			public void onSuccess(JSONObject responseMSG) {
 				try {
+					Log.v(LOG_TAG, "successfully got a post");
 					post_difficulty.setText(responseMSG.getString("difficulty"));
 					post_rating.setText(responseMSG.getString("rating"));
 					post_name.setText(responseMSG.getString("title"));
+					first_step_id = responseMSG.getString("first_step_id");
+					num_steps = responseMSG.getString("num_steps");
 
 
 				} catch (JSONException e) {
@@ -95,8 +101,13 @@ public class ViewPost extends Activity {
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking view first step Button");
 				//pass extras of post name/id?
-				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
-				//startActivity(i);
+				Log.v(LOG_TAG,"first_step_id" + first_step_id);
+				Log.v(LOG_TAG,"total steps: " + num_steps);
+				Intent i = new Intent(ViewPost.this, ViewStep.class);
+            	i.putExtra("first_step_id", first_step_id);
+            	i.putExtra("num_steps",num_steps);
+            	i.putExtra("current_step", current_step);
+            	startActivity(i);
 			}
 		});
 		
@@ -130,10 +141,10 @@ public class ViewPost extends Activity {
 		// TODO Auto-generated method stub
 		super.onRestart();
 		setContentView(R.layout.view_post);
-		post_difficulty = (TextView)findViewById(R.id.post_difficulty);
-		post_name = (TextView)findViewById(R.id.post_name);
+		post_difficulty = (TextView)findViewById(R.id.stepTitle);
+		post_name = (TextView)findViewById(R.id.totalSteps);
 		post_user = (TextView)findViewById(R.id.post_user);
-		post_rating = (TextView)findViewById(R.id.post_rating);
+		post_rating = (TextView)findViewById(R.id.curStep);
 
 		view_first_step = (Button)findViewById(R.id.view_first_step);
 		comment = (Button)findViewById(R.id.comment);
@@ -148,9 +159,12 @@ public class ViewPost extends Activity {
 			@Override
 			public void onSuccess(JSONObject responseMSG) {
 				try {
+					Log.v(LOG_TAG, "successfully got a post");
 					post_difficulty.setText(responseMSG.getString("difficulty"));
 					post_rating.setText(responseMSG.getString("rating"));
 					post_name.setText(responseMSG.getString("title"));
+					first_step_id = responseMSG.getString("first_step_id");
+					num_steps = responseMSG.getString("num_steps");
 
 
 				} catch (JSONException e) {
@@ -194,9 +208,13 @@ public class ViewPost extends Activity {
 			@Override
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking view first step Button");
-				//pass extras of post name/id?
-				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
-				//startActivity(i);
+				Log.v(LOG_TAG,"first_step_id" + first_step_id);
+				Log.v(LOG_TAG,"total steps: " + num_steps);
+				Intent i = new Intent(ViewPost.this, ViewStep.class);
+            	i.putExtra("first_step_id", first_step_id);
+            	i.putExtra("num_steps",num_steps);
+            	i.putExtra("current_step", current_step);
+            	startActivity(i);
 			}
 		});
 		
@@ -231,10 +249,10 @@ public class ViewPost extends Activity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		setContentView(R.layout.view_post);
-		post_difficulty = (TextView)findViewById(R.id.post_difficulty);
-		post_name = (TextView)findViewById(R.id.post_name);
+		post_difficulty = (TextView)findViewById(R.id.stepTitle);
+		post_name = (TextView)findViewById(R.id.totalSteps);
 		post_user = (TextView)findViewById(R.id.post_user);
-		post_rating = (TextView)findViewById(R.id.post_rating);
+		post_rating = (TextView)findViewById(R.id.curStep);
 
 		view_first_step = (Button)findViewById(R.id.view_first_step);
 		comment = (Button)findViewById(R.id.comment);
@@ -245,13 +263,16 @@ public class ViewPost extends Activity {
 		RequestParams params = new RequestParams();
 		params.put("title", post);
 
-		SplashScreen.myClient.get("http://step1.herokuapp.com/getapost.json",params,  new JsonHttpResponseHandler() {
+		SplashScreen.myClient.get("http://step1.herokuapp.com/getapost.json", params,  new JsonHttpResponseHandler() {
 			@Override
 			public void onSuccess(JSONObject responseMSG) {
 				try {
+					Log.v(LOG_TAG, "successfully got a post");
 					post_difficulty.setText(responseMSG.getString("difficulty"));
 					post_rating.setText(responseMSG.getString("rating"));
 					post_name.setText(responseMSG.getString("title"));
+					first_step_id = responseMSG.getString("first_step_id");
+					num_steps = responseMSG.getString("num_steps");
 
 
 				} catch (JSONException e) {
@@ -295,9 +316,13 @@ public class ViewPost extends Activity {
 			@Override
 			public void onClick(View v) {
 				Log.v(LOG_TAG, "clicking view first step Button");
-				//pass extras of post name/id?
-				//Intent i = new Intent(ViewPost.this, ViewStep.class);     
-				//startActivity(i);
+				Log.v(LOG_TAG,"first_step_id" + first_step_id);
+				Log.v(LOG_TAG,"total steps: " + num_steps);
+				Intent i = new Intent(ViewPost.this, ViewStep.class);
+            	i.putExtra("first_step_id", first_step_id);
+            	i.putExtra("num_steps",num_steps);
+            	i.putExtra("current_step", current_step);
+            	startActivity(i);
 			}
 		});
 		
