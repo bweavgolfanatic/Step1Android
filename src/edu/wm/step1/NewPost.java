@@ -104,9 +104,12 @@ public class NewPost extends Activity {
 							String message = responseMSG.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("post created successfully")){
+								String pid = responseMSG.getString("postid");
 								Log.v(LOG_TAG, "created new post");
-								Intent i = new Intent(NewPost.this, CreateStep.class);     
+								Intent i = new Intent(NewPost.this, CreateStep.class); 
+								i.putExtra("pid", pid);
 								startActivity(i);
+								finish();
 							}
 							else{
 								Toast.makeText(getBaseContext(), "Can't Create Post", Toast.LENGTH_SHORT).show(); 
@@ -201,9 +204,12 @@ public class NewPost extends Activity {
 							String message = responseMSG.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("post created successfully")){
+								String pid = responseMSG.getString("postid");
 								Log.v(LOG_TAG, "created new post");
-								Intent i = new Intent(NewPost.this, CreateStep.class);     
+								Intent i = new Intent(NewPost.this, CreateStep.class); 
+								i.putExtra("pid", pid);
 								startActivity(i);
+								finish();
 							}
 							else{
 								Toast.makeText(getBaseContext(), "Can't Create Post", Toast.LENGTH_SHORT).show(); 
@@ -298,9 +304,12 @@ public class NewPost extends Activity {
 							String message = responseMSG.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("post created successfully")){
+								String pid = responseMSG.getString("postid");
 								Log.v(LOG_TAG, "created new post");
-								Intent i = new Intent(NewPost.this, CreateStep.class);     
+								Intent i = new Intent(NewPost.this, CreateStep.class); 
+								i.putExtra("pid", pid);
 								startActivity(i);
+								finish();
 							}
 							else{
 								Toast.makeText(getBaseContext(), "Can't Create Post", Toast.LENGTH_SHORT).show(); 
@@ -425,9 +434,12 @@ public class NewPost extends Activity {
 							String message = responseMSG.getString("message");
 							Log.v(LOG_TAG,message);
 							if(message.equals("post created successfully")){
+								String pid = responseMSG.getString("postid");
 								Log.v(LOG_TAG, "created new post");
-								Intent i = new Intent(NewPost.this, CreateStep.class);     
+								Intent i = new Intent(NewPost.this, CreateStep.class); 
+								i.putExtra("pid", pid);
 								startActivity(i);
+								finish();
 							}
 							else{
 								Toast.makeText(getBaseContext(), "Can't Create Post", Toast.LENGTH_SHORT).show(); 

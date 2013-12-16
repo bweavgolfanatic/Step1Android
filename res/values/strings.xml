@@ -39,6 +39,7 @@
     <string name="comments">Comments:</string>
     <string name="picture">Take Picture</string>
     <string name="toolbox">Step1</string>
+    <string name="album_name">CameraSample</string>
     
     <string name="category_prompt">Pick a Category</string>
  
@@ -72,5 +73,9 @@
     <string name="title_activity_my_posts">MyPosts</string>
     <string name="title_activity_spash_screen">SpashScreen</string>
     <string name="logout">log out</string>
+    <string name="entertext">Enter Text Here!</string>
+    <string name="finish">Finish!</string>
+    <string name="rotate">Rotate Picture</string>
+    <string name="browsepics">Browse</string>
 
 </resources>

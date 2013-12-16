@@ -53,6 +53,7 @@ public class Index extends Activity {
 		browseButton = (Button) findViewById(R.id.browseButton);
 		myPostsButton = (Button) findViewById(R.id.myPostsButton);
 		logoutButton = (Button) findViewById(R.id.logout);
+		Button testbutton = (Button) findViewById(R.id.finish);
 		
 
 		SplashScreen.myClient.get(getApplicationContext(),"http://step1.herokuapp.com/my_details.json", new JsonHttpResponseHandler() {
@@ -87,6 +88,16 @@ public class Index extends Activity {
 				Log.v(LOG_TAG, "clicking newPost Button");
 				//check if newPost possible?
 				Intent i = new Intent(Index.this, NewPost.class);     
+				startActivity(i);
+			}
+		});
+		
+		testbutton.setOnClickListener(new View.OnClickListener() { 
+			@Override
+			public void onClick(View v) {
+				Log.v(LOG_TAG, "clicking newPost Button");
+				//check if newPost possible?
+				Intent i = new Intent(Index.this, ViewStep.class);     
 				startActivity(i);
 			}
 		});

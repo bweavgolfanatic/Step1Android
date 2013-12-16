@@ -13,46 +13,74 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="top|left"
+        android:hint="@string/entertext"
         android:inputType="textMultiLine"
         android:lines="5"
         android:scrollHorizontally="false" />
-
-    <Button
-        android:id="@+id/button2"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/next" />
 
     <Button
         android:id="@+id/button3"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="100dp"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="@string/previous" />
+
+    <Button
+        android:id="@+id/nextstep"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/next" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/nextstep"
+        android:layout_toRightOf="@+id/nextstep"
+        android:text="@string/finish" />
 
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/takepicture"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/EditText02"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
         android:src="@drawable/ic_launcher" />
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/rotate"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/button2"
-        android:layout_alignLeft="@+id/button3"
-        android:layout_alignRight="@+id/button2"
-        android:layout_marginBottom="36dp"
+        android:layout_alignLeft="@+id/finish"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/takepicture"
+        android:text="@string/rotate" />
+
+    <Button
+        android:id="@+id/takepicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button3"
+        android:layout_alignRight="@+id/nextstep"
+        android:layout_marginBottom="32dp"
+        android:layout_toRightOf="@+id/browsepics"
         android:text="@string/picture" />
+
+    <Button
+        android:id="@+id/browsepics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignTop="@+id/takepicture"
+        android:text="@string/browsepics" />
 
 </RelativeLayout>

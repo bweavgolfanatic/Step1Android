@@ -65,7 +65,7 @@
         android:text="@string/blank" />
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/logout2"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="80dp"
         android:layout_height="wrap_content"
