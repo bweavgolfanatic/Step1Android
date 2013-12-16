@@ -98,7 +98,7 @@ public class MyPosts extends Activity {
                 Log.v(LOG_TAG,"usernameString is " + post);
 
                 
-                SplashScreen.myClient.get("http://step1.herokuapp.com/user_posts.json", params,  new JsonHttpResponseHandler() {
+                SplashScreen.myClient.get("http://step1.herokuapp.com/my_posts.json", params,  new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject responseMSG) {
 
@@ -147,7 +147,7 @@ public class MyPosts extends Activity {
                         @Override
                         public void onFailure(Throwable arg0,String response) {
 
-                                Log.d(LOG_TAG, "User Posts didn't work" );        
+                                Log.d(LOG_TAG, "My Posts didn't work" );        
                         } 
 
 
@@ -213,7 +213,7 @@ public class MyPosts extends Activity {
                 Log.v(LOG_TAG,"params is " + post);
 
                 
-                SplashScreen.myClient.get("http://step1.herokuapp.com/user_posts.json", params,  new JsonHttpResponseHandler() {
+                SplashScreen.myClient.get("http://step1.herokuapp.com/my_posts.json", params,  new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject responseMSG) {
 
@@ -325,7 +325,7 @@ public class MyPosts extends Activity {
                 Log.v(LOG_TAG,"params is " + post);
 
                 
-                SplashScreen.myClient.get("http://step1.herokuapp.com/user_posts.json", params,  new JsonHttpResponseHandler() {
+                SplashScreen.myClient.get("http://step1.herokuapp.com/my_posts.json", params,  new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(JSONObject responseMSG) {
 

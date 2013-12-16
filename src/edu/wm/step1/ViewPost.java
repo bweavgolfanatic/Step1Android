@@ -118,8 +118,10 @@ public class ViewPost extends Activity {
                         public void onClick(View v) {
                                 Log.v(LOG_TAG, "clicking view first step Button");
                                 //pass extras of post name/id?
-                                //Intent i = new Intent(ViewPost.this, Comment.class);     
-                                //startActivity(i);
+                                
+                                Intent i = new Intent(ViewPost.this, PostComments.class); 
+                                i.putExtra("post", post);
+                                startActivity(i);
                         }
                 });
                 
@@ -226,8 +228,9 @@ public class ViewPost extends Activity {
                         public void onClick(View v) {
                                 Log.v(LOG_TAG, "clicking view first step Button");
                                 //pass extras of post name/id?
-                                //Intent i = new Intent(ViewPost.this, Comment.class);     
-                                //startActivity(i);
+                                Intent i = new Intent(ViewPost.this, PostComments.class); 
+                                i.putExtra("post", post);
+                                startActivity(i);
                         }
                 });
                 
@@ -335,8 +338,9 @@ public class ViewPost extends Activity {
                         public void onClick(View v) {
                                 Log.v(LOG_TAG, "clicking view first step Button");
                                 //pass extras of post name/id?
-                                //Intent i = new Intent(ViewPost.this, Comment.class);     
-                                //startActivity(i);
+                                Intent i = new Intent(ViewPost.this, PostComments.class); 
+                                i.putExtra("post", post);
+                                startActivity(i);
                         }
                 });
                 

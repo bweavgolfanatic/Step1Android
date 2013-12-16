@@ -47,9 +47,12 @@
     <string name="picture">Take Picture</string>
     <string name="toolbox">Step1</string>
     <string name="album_name">CameraSample</string>
-    
+    <string name="index">Index</string>
+    <string name="commentText">Enter a Comment</string>
+    <string name="returnPost">Return to Post</string>
+    <string name="returnStep">Return to Step</string>
     <string name="category_prompt">Pick a Category</string>
- 
+
     <string-array name="category_arrays">
         <item>Computers and Electronics</item>
         <item>Hobbies and Crafts</item>
@@ -63,9 +66,7 @@
         <item>Finance, Business and Legal</item>
         <item>Food, Kitchen and Appliances</item>
         <item>Other</item>
-        
     </string-array>
-
     <string-array name="Sorting">
         <item>Popular</item>
         <item>Latest</item>
@@ -84,5 +85,6 @@
     <string name="finish">Finish!</string>
     <string name="rotate">Rotate Picture</string>
     <string name="browsepics">Browse</string>
+    <string name="title_activity_step_comments">StepComments</string>
 
 </resources>
