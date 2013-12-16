@@ -30,8 +30,7 @@
         <activity android:name="edu.wm.step1.MyPosts" />
         <activity android:name="edu.wm.step1.PostComments" />
         <activity android:name="edu.wm.step1.UserPosts" />
-        
-        
+
         <!-- Splash screen -->
         <activity
             android:name="edu.wm.step1.SplashScreen"
@@ -47,6 +46,18 @@
         <activity
             android:name="edu.wm.step1.StepComments"
             android:label="@string/title_activity_step_comments" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.ComposeMessage"
+            android:label="@string/title_activity_compose_message" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.Inbox"
+            android:label="@string/title_activity_inbox" >
+        </activity>
+        <activity
+            android:name="edu.wm.step1.ViewEmail"
+            android:label="@string/title_activity_view_email" >
         </activity>
     </application>
 

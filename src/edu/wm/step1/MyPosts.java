@@ -46,7 +46,6 @@ public class MyPosts extends Activity {
                 super.onCreate(savedInstanceState);
                 setContentView(R.layout.my_posts);
 
-                setContentView(R.layout.my_posts);
 
                 listview = (ListView) findViewById(R.id.listView1);
                 listview.setClickable(true);

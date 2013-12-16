@@ -52,6 +52,16 @@
     <string name="returnPost">Return to Post</string>
     <string name="returnStep">Return to Step</string>
     <string name="category_prompt">Pick a Category</string>
+    <string name="subject">Subject</string>
+    <string name="recipient">Recipient</string>
+    <string name="messages">Messages</string>
+    <string name="body">Message Body</string>
+    <string name="reply">Reply</string>
+    <string name="goback">Return</string>
+    <string name="from">From: </string>
+    <string name="subject4">Subject: </string>
+    <string name="newmessage">New Message</string>
+    <string name="sendmessage">Send Message</string>
 
     <string-array name="category_arrays">
         <item>Computers and Electronics</item>
@@ -86,5 +96,8 @@
     <string name="rotate">Rotate Picture</string>
     <string name="browsepics">Browse</string>
     <string name="title_activity_step_comments">StepComments</string>
+    <string name="title_activity_compose_message">ComposeMessage</string>
+    <string name="title_activity_inbox">Inbox</string>
+    <string name="title_activity_view_email">ViewEmail</string>
 
 </resources>

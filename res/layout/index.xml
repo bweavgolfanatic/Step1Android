@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Index" >
-
+ 
     <QuickContactBadge
         android:id="@+id/quickContactBadge1"
         android:layout_width="wrap_content"
@@ -15,7 +15,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_marginTop="22dp" />
-
+ 
     <View
         android:id="@+id/view1"
         android:layout_width="1dip"
@@ -24,7 +24,7 @@
         android:layout_marginLeft="18dp"
         android:layout_toRightOf="@+id/username"
         android:background="#000000" />
-
+ 
     <TextView
         android:id="@+id/rating"
         android:layout_width="wrap_content"
@@ -34,7 +34,7 @@
         android:layout_marginBottom="80dp"
         android:text="@string/rating"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/username"
         android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
         android:layout_marginBottom="57dp"
         android:text="@string/username2"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/numPostsTitle"
         android:layout_width="wrap_content"
@@ -54,7 +54,7 @@
         android:layout_marginBottom="67dp"
         android:text="@string/posts"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/numPosts"
         android:layout_width="wrap_content"
@@ -64,7 +64,7 @@
         android:layout_marginTop="25dp"
         android:text="@string/blank"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <Button
         android:id="@+id/myPostsButton"
         android:layout_width="wrap_content"
@@ -73,9 +73,9 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@+id/view1"
         android:text="@string/myPosts" />
-
-    
-
+ 
+   
+ 
     <TextView
         android:id="@+id/usernameText"
         android:layout_width="wrap_content"
@@ -84,7 +84,7 @@
         android:layout_alignTop="@+id/browseButton"
         android:text="@string/blank"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <TextView
         android:id="@+id/ratingText"
         android:layout_width="wrap_content"
@@ -94,7 +94,7 @@
         android:layout_marginTop="26dp"
         android:text="@string/blank"
         android:textAppearance="?android:attr/textAppearanceMedium" />
-
+ 
     <Button
         android:id="@+id/browseButton"
         android:layout_width="wrap_content"
@@ -103,17 +103,7 @@
         android:layout_alignLeft="@+id/myPostsButton"
         android:layout_alignParentRight="true"
         android:text="@string/browse" />
-
-    <Button
-        android:id="@+id/newPostButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/browseButton"
-        android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/quickContactBadge1"
-        android:layout_marginTop="34dp"
-        android:text="@string/newPost" />
-
+ 
     <Button
         android:id="@+id/logout"
         style="?android:attr/buttonStyleSmall"
@@ -122,5 +112,23 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:text="@string/logout" />
-
+ 
+    <Button
+        android:id="@+id/messages"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/browseButton"
+        android:layout_alignRight="@+id/myPostsButton"
+        android:layout_alignTop="@+id/ratingText"
+        android:text="@string/messages" />
+ 
+    <Button
+        android:id="@+id/newPostButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/username"
+        android:layout_alignLeft="@+id/browseButton"
+        android:layout_alignRight="@+id/browseButton"
+        android:text="@string/newPost" />
+ 
 </RelativeLayout>
