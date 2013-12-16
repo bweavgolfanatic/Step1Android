@@ -9,63 +9,61 @@
     tools:context=".ViewStep" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/curStep"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="34dp"
-        android:text="@string/step"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/stepTitle"
+        android:layout_alignBottom="@+id/stepTitle"
         android:layout_marginLeft="14dp"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/stepTitle"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/post_user"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/textView4"
+        android:layout_alignBottom="@+id/curStep"
         android:layout_centerHorizontal="true"
         android:text="@string/of"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/totalSteps"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignBaseline="@+id/post_user"
+        android:layout_alignBottom="@+id/post_user"
         android:layout_marginLeft="29dp"
-        android:layout_toRightOf="@+id/textView3"
+        android:layout_toRightOf="@+id/post_user"
         android:text="Small Text"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <View
-        android:id="@+id/view1"
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:layout_alignLeft="@+id/textView1"
-        android:layout_below="@+id/textView1"
-        android:layout_marginTop="24dp"
-        android:background="#000000" />
-
-    <TextView
-        android:id="@+id/textView5"
+    <Button
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/post_user"
+        android:text="@string/comment" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/post_user"
+        android:text="@string/next" />
+
+    <TextView
+        android:id="@+id/stepText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/view1"
-        android:layout_marginLeft="27dp"
-        android:layout_marginTop="70dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
@@ -73,19 +71,27 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView5"
-        android:layout_marginTop="64dp"
-        android:layout_toLeftOf="@+id/textView2"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/stepText"
         android:src="@drawable/ic_launcher" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/stepTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="63dp"
-        android:text="@string/comments"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:layout_alignLeft="@+id/imageView1"
+        android:layout_alignParentTop="true"
+        android:text="@string/step"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="fill_parent"
+        android:layout_height="1dip"
+        android:layout_alignLeft="@+id/stepTitle"
+        android:layout_below="@+id/post_user"
+        android:background="#000000" />
 
 </RelativeLayout>

@@ -7,38 +7,121 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Browse" >
-    
-    <Button
-        android:id="@+id/button2"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:text="@string/next" />
-
-    <Button
-        android:id="@+id/button3"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:text="@string/previous" />
 
     <LinearLayout
+        android:id="@+id/linearLayout1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button3"
         android:orientation="vertical" >
 
         <ListView
-            android:id="@+id/listView1"
-            android:layout_width="match_parent"
-            android:layout_height="338dp" >
+            android:id="@+id/posts_list"
+            android:layout_width="102dp"
+            android:layout_height="432dp"
+            android:textColor="#000000" >
         </ListView>
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/search_by_title"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/search_by_title"
+        android:text="@string/search"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <RadioGroup
+        android:id="@+id/sorting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sortingText"
+        android:layout_toRightOf="@+id/linearLayout1"
+        tools:listitem="@android:layout/simple_spinner_item" >
+
+        <RadioButton
+            android:id="@+id/latest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest"
+            tools:listitem="@android:layout/simple_spinner_item" />
+
+        <RadioButton
+            android:id="@+id/oldest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/oldest"
+            tools:listitem="@android:layout/simple_spinner_item" />
+
+        <RadioButton
+            android:id="@+id/popular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/popular"
+            tools:listitem="@android:layout/simple_spinner_item" />
+
+        <RadioButton
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="31dp"
+            android:text="@string/username"
+            tools:listitem="@android:layout/simple_spinner_item" />
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/username_edit_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sorting"
+        android:layout_alignLeft="@+id/sorting"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="@string/username"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <EditText
+        android:id="@+id/search_by_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sorting"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/sorting"
+        android:ems="10"
+        android:hint="@string/search_by_title"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/sortingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/sorting"
+        android:layout_alignTop="@+id/linearLayout1"
+        android:text="@string/sorting"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        tools:listitem="@android:layout/simple_spinner_item" />
+
+    <TextView
+        android:id="@+id/categoryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/sorting"
+        android:layout_below="@+id/searchButton"
+        android:layout_marginTop="33dp"
+        android:text="@string/category"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/searchButton"
+        android:layout_below="@+id/categoryText"
+        android:entries="@array/category_arrays"
+        android:prompt="@string/category_prompt" />
 
 </RelativeLayout>

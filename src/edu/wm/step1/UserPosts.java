@@ -1,5 +1,10 @@
 package edu.wm.step1;
 
+import android.os.Bundle;
+import android.app.Activity;
+import android.view.Menu;
+
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -10,19 +15,19 @@ import org.json.JSONObject;
 import com.loopj.android.http.JsonHttpResponseHandler;
 import com.loopj.android.http.RequestParams;
 
-import android.os.Bundle;
+
 import android.widget.*;
 import android.widget.AdapterView.OnItemClickListener;
-import android.app.Activity;
+
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.util.Log;
-import android.view.Menu;
+
 import android.view.View;
 import android.view.ViewGroup;
 
-public class MyPosts extends Activity {
+public class UserPosts extends Activity {
 
         private String LOG_TAG = "edu.wm.step1";
 
@@ -31,7 +36,7 @@ public class MyPosts extends Activity {
         private TextView rating;
         private String usernameString;
         
-        private Button uploadButton;
+        //private Button uploadButton;
         private ListView listview;
         private List<String> listContents = new ArrayList<String>();
         private ArrayAdapter<String> adapter;
@@ -55,7 +60,7 @@ public class MyPosts extends Activity {
                 rating = (TextView)findViewById(R.id.textView2);
                 numPosts = (TextView)findViewById(R.id.textView3);
 
-                uploadButton =(Button)findViewById(R.id.uploadButton);
+                //uploadButton =(Button)findViewById(R.id.uploadButton);
                 
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
@@ -170,7 +175,7 @@ public class MyPosts extends Activity {
                 rating = (TextView)findViewById(R.id.textView2);
                 numPosts = (TextView)findViewById(R.id.textView3);
 
-                uploadButton =(Button)findViewById(R.id.uploadButton);
+                //uploadButton =(Button)findViewById(R.id.uploadButton);
                 
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
@@ -282,7 +287,7 @@ public class MyPosts extends Activity {
                 rating = (TextView)findViewById(R.id.textView2);
                 numPosts = (TextView)findViewById(R.id.textView3);
 
-                uploadButton =(Button)findViewById(R.id.uploadButton);
+                //uploadButton =(Button)findViewById(R.id.uploadButton);
                 
                 Intent intent = getIntent();
                 String post = intent.getExtras().getString("username");
